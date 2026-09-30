@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing — AnjHub Website Templates for Hair & Beauty Salons</title>
+    <meta name="description" content="Affordable, one-time pricing for professional website templates built for hair salons and beauty studios.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 24px; font-weight: 700; color: #0f766e; text-decoration: none; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #0f766e; }
+        .btn { display: inline-block; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .btn-primary { background: #0f766e; color: #fff; }
+        .btn-primary:hover { background: #0d5d56; transform: translateY(-2px); }
+        .page-header { margin-top: 80px; padding: 60px 0; background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); text-align: center; }
+        .page-header h1 { font-size: 42px; color: #0b3b36; margin-bottom: 15px; }
+        .page-header p { font-size: 18px; color: #4b5563; }
+        .pricing { padding: 60px 0; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .pricing-card { background: #fff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 40px; text-align: center; transition: all 0.3s; }
+        .pricing-card:hover { border-color: #0f766e; box-shadow: 0 10px 30px rgba(15,118,110,0.1); }
+        .pricing-card.popular { border-color: #0f766e; position: relative; }
+        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #0f766e; color: #fff; padding: 4px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+        .pricing-card h3 { font-size: 24px; color: #0b3b36; margin-bottom: 10px; }
+        .pricing-card .desc { color: #6b7280; margin-bottom: 20px; }
+        .price { font-size: 48px; font-weight: 700; color: #0f766e; margin-bottom: 20px; }
+        .price span { font-size: 16px; color: #9ca3af; font-weight: 400; }
+        .features-list { list-style: none; text-align: left; margin-bottom: 30px; }
+        .features-list li { padding: 8px 0; color: #4b5563; padding-left: 28px; position: relative; }
+        .features-list li::before { content: '✓'; position: absolute; left: 0; color: #0f766e; font-weight: 700; }
+        .faq { padding: 60px 0; background: #f9fafb; }
+        .faq-grid { max-width: 800px; margin: 0 auto; }
+        .faq-item { margin-bottom: 25px; }
+        .faq-item h3 { font-size: 18px; color: #0b3b36; margin-bottom: 8px; }
+        .faq-item p { color: #6b7280; }
+        footer { background: #111827; color: #9ca3af; padding: 40px 0; text-align: center; }
+        footer a { color: #9ca3af; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: #fff; }
+        .footer-links { margin-bottom: 20px; }
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 32px; }
+            .price { font-size: 36px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">AnjHub</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="index.html#templates">Templates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>One-time purchase. No subscriptions. No hidden fees. Your salon website, forever.</p>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="desc">For new salons getting online</p>
+                    <div class="price">$49 <span>one-time</span></div>
+                    <ul class="features-list">
+                        <li>1 professional template</li>
+                        <li>Mobile responsive design</li>
+                        <li>Basic SEO setup</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width:100%">Get Started</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <p class="desc">For growing salons</p>
+                    <div class="price">$79 <span>one-time</span></div>
+                    <ul class="features-list">
+                        <li>1 premium template</li>
+                        <li>Mobile + tablet responsive</li>
+                        <li>Advanced SEO setup</li>
+                        <li>Booking integration ready</li>
+                        <li>Priority email support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width:100%">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Elite</h3>
+                    <p class="desc">For luxury salons & chains</p>
+                    <div class="price">$149 <span>one-time</span></div>
+                    <ul class="features-list">
+                        <li>1 exclusive template</li>
+                        <li>All device responsive</li>
+                        <li>Full SEO optimization</li>
+                        <li>Booking + payment ready</li>
+                        <li>VIP support</li>
+                        <li>Multi-language support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width:100%">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; font-size:36px; margin-bottom:40px; color:#0b3b36;">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What's included in a one-time purchase?</h3>
+                    <p>You get lifetime access to the template, including all future updates. No monthly or yearly fees.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I switch templates later?</h3>
+                    <p>Yes. If you want a different template, you can purchase it at any time. We'll help migrate your content.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need technical skills?</h3>
+                    <p>No. Our templates are designed for non-technical salon owners. Simply customize colors, photos, and text.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a refund policy?</h3>
+                    <p>Yes. We offer a 14-day money-back guarantee if you're not satisfied with your template.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <p>&copy; 2026 AnjHub (爱加引擎). All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
