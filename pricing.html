@@ -114,6 +114,22 @@
         .custom-card .cannual { font-size: 14px; color: var(--body); margin-bottom: 16px; }
         .custom-card p.cinc { font-size: 14.5px; color: var(--body); margin-bottom: 22px; }
 
+        /* Email & SMS add-ons */
+        .addons { padding: 60px 0; background: #fff; }
+        .addons-title { text-align: center; font-size: 30px; color: var(--heading); margin-bottom: 10px; }
+        .addons-sub { text-align: center; color: var(--body); margin-bottom: 42px; font-size: 16px; }
+        .addons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; max-width: 880px; margin: 0 auto; }
+        .addon-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 34px 32px; text-align: center; }
+        .addon-icon { width: 56px; height: 56px; margin: 0 auto 16px; background: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .addon-card h3 { font-size: 21px; color: var(--heading); margin-bottom: 10px; }
+        .addon-free { font-size: 15px; color: var(--body); margin-bottom: 18px; }
+        .addon-free strong { color: var(--primary); }
+        .addon-list { list-style: none; margin-bottom: 18px; text-align: left; }
+        .addon-list li { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--border); font-size: 14.5px; color: var(--body); }
+        .addon-list li:last-child { border-bottom: none; }
+        .addon-list span { font-weight: 700; color: var(--primary); }
+        .addon-note { font-size: 13.5px; color: #9aa6b8; line-height: 1.5; }
+
         /* FAQ */
         .faq { padding: 64px 0; background: var(--bg); }
         .faq h2 { text-align: center; font-size: 32px; color: var(--heading); margin-bottom: 42px; }
@@ -279,6 +295,36 @@
                         <li>Dedicated account manager</li>
                     </ul>
                     <a href="#faq" class="btn btn-outline btn-block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="addons">
+        <div class="container">
+            <h2 class="addons-title">Email &amp; SMS Add-ons</h2>
+            <p class="addons-sub">Reach more clients. Pay only for what you send — no plan change required.</p>
+            <div class="addons-grid">
+                <div class="addon-card">
+                    <div class="addon-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p class="addon-free">1,000 emails / month <strong>free</strong></p>
+                    <ul class="addon-list">
+                        <li>Top-up pack <span>$8.50</span></li>
+                        <li>Top-up pack <span>$25</span></li>
+                        <li>Top-up pack <span>$51</span></li>
+                    </ul>
+                    <p class="addon-note">Ideal for confirmations, reminders and offers. Unused monthly allowance resets each month.</p>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-icon">💬</div>
+                    <h3>SMS</h3>
+                    <p class="addon-free">Pay as you go</p>
+                    <ul class="addon-list">
+                        <li>Per message <span>$0.018</span></li>
+                        <li>Bulk pack <span>$17 / 1,000</span></li>
+                    </ul>
+                    <p class="addon-note">Great for last-minute reminders and no-show reduction. Credits are added to your account on purchase.</p>
                 </div>
             </div>
         </div>
