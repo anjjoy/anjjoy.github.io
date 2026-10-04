@@ -3,50 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing — AnjHub Website Templates for Hair & Beauty Salons</title>
-    <meta name="description" content="Affordable, one-time pricing for professional website templates built for hair salons and beauty studios.">
+    <link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg">
+    <title>Pricing — AnjHub Online Booking Websites for Salons</title>
+    <meta name="description" content="Start a free 14-day trial. Simple monthly plans from $45 — or save with annual billing. No surprise charges, no lock-in.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background: #fff; }
+        :root {
+            --primary: #2F5597;
+            --primary-dark: #284a85;
+            --deep: #162E60;
+            --heading: #15243B;
+            --body: #3D4F66;
+            --border: #D9DFE7;
+            --bg: #f4f6fa;
+            --tint: #e3ebf7;
+            --gold: #b8862b;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: var(--body); background: #fff; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        .logo { font-size: 24px; font-weight: 700; color: #0f766e; text-decoration: none; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
-        .nav-links a:hover { color: #0f766e; }
-        .btn { display: inline-block; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
-        .btn-primary { background: #0f766e; color: #fff; }
-        .btn-primary:hover { background: #0d5d56; transform: translateY(-2px); }
-        .page-header { margin-top: 80px; padding: 60px 0; background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); text-align: center; }
-        .page-header h1 { font-size: 42px; color: #0b3b36; margin-bottom: 15px; }
-        .page-header p { font-size: 18px; color: #4b5563; }
-        .pricing { padding: 60px 0; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
-        .pricing-card { background: #fff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 40px; text-align: center; transition: all 0.3s; }
-        .pricing-card:hover { border-color: #0f766e; box-shadow: 0 10px 30px rgba(15,118,110,0.1); }
-        .pricing-card.popular { border-color: #0f766e; position: relative; }
-        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #0f766e; color: #fff; padding: 4px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; }
-        .pricing-card h3 { font-size: 24px; color: #0b3b36; margin-bottom: 10px; }
-        .pricing-card .desc { color: #6b7280; margin-bottom: 20px; }
-        .price { font-size: 48px; font-weight: 700; color: #0f766e; margin-bottom: 20px; }
-        .price span { font-size: 16px; color: #9ca3af; font-weight: 400; }
-        .features-list { list-style: none; text-align: left; margin-bottom: 30px; }
-        .features-list li { padding: 8px 0; color: #4b5563; padding-left: 28px; position: relative; }
-        .features-list li::before { content: '✓'; position: absolute; left: 0; color: #0f766e; font-weight: 700; }
-        .faq { padding: 60px 0; background: #f9fafb; }
+        a { text-decoration: none; }
+
+        header { background: #fff; box-shadow: 0 1px 3px rgba(21,36,59,.12); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+        .logo { display: inline-flex; align-items: center; }
+        .logo img { height: 50px; width: auto; display: block; }
+        .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--heading); font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta { display: inline-block; background: var(--primary); color: #fff !important; padding: 9px 20px; border-radius: 8px; font-weight: 600; }
+        .nav-cta:hover { background: var(--primary-dark); }
+
+        .btn { display: inline-block; padding: 12px 26px; border-radius: 8px; font-weight: 600; transition: all .2s; border: 2px solid transparent; font-size: 16px; }
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-outline { border-color: var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline:hover { background: var(--primary); color: #fff; }
+        .btn-light { background: #fff; color: var(--primary); }
+        .btn-light:hover { transform: translateY(-2px); }
+        .btn-block { display: block; width: 100%; text-align: center; margin-bottom: 10px; }
+
+        .page-header { margin-top: 88px; padding: 64px 0 56px; background: linear-gradient(135deg, #eef3fb 0%, #dbe6f6 100%); text-align: center; }
+        .page-header h1 { font-size: 42px; color: var(--heading); margin-bottom: 14px; }
+        .page-header p { font-size: 18px; color: var(--body); max-width: 660px; margin: 0 auto; }
+
+        /* Trial */
+        .trial { padding: 64px 0 30px; }
+        .trial-card { max-width: 760px; margin: 0 auto; background: var(--deep); color: #fff; border-radius: 18px; padding: 44px 48px; display: flex; align-items: center; gap: 40px; box-shadow: 0 18px 40px rgba(22,46,96,.25); }
+        .trial-left { flex: 1; }
+        .trial-badge { display: inline-block; background: rgba(255,255,255,.16); font-size: 13px; font-weight: 600; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; }
+        .trial-price { font-size: 52px; font-weight: 700; line-height: 1; margin-bottom: 6px; white-space: nowrap; }
+        .trial-price small { font-size: 17px; font-weight: 400; opacity: .8; }
+        .trial-left p { opacity: .9; font-size: 15px; }
+        .trial-list { list-style: none; margin: 18px 0 0; }
+        .trial-list li { padding: 5px 0 5px 26px; position: relative; font-size: 14.5px; }
+        .trial-list li::before { content: '✓'; position: absolute; left: 0; font-weight: 700; }
+        .trial-right { min-width: 200px; text-align: center; }
+        .trial-right .note { font-size: 12.5px; opacity: .75; margin-top: 10px; }
+
+        /* Founding offer */
+        .founding { padding: 10px 0 0; }
+        .founding-card { max-width: 1040px; margin: 0 auto; background: linear-gradient(135deg, #fbf6e9 0%, #f5ead0 100%); border: 1px solid #e6d29c; border-radius: 14px; padding: 22px 30px; display: flex; align-items: center; gap: 20px; }
+        .founding-card .star { font-size: 26px; }
+        .founding-card h3 { font-size: 17px; color: #7c5a17; margin-bottom: 2px; }
+        .founding-card p { font-size: 14.5px; color: #6d5a2e; }
+
+        /* Plans */
+        .plans { padding: 46px 0 60px; }
+        .plans-title { text-align: center; font-size: 30px; color: var(--heading); margin-bottom: 8px; }
+        .plans-sub { text-align: center; color: var(--body); margin-bottom: 26px; font-size: 16px; }
+
+        .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 40px; }
+        .billing-toggle .lbl { font-size: 15px; font-weight: 600; color: #9aa6b8; cursor: pointer; transition: color .2s; }
+        .billing-toggle .lbl.active { color: var(--heading); }
+        .switch { position: relative; width: 54px; height: 30px; background: var(--primary); border-radius: 20px; cursor: pointer; border: none; }
+        .switch::after { content: ''; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; background: #fff; border-radius: 50%; transition: transform .22s; }
+        body.annual .switch::after { transform: translateX(24px); }
+        .save-tag { background: var(--tint); color: var(--primary); font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 14px; }
+
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 24px; }
+        .pricing-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 32px 26px; transition: all .2s; display: flex; flex-direction: column; }
+        .pricing-card:hover { border-color: var(--primary); box-shadow: 0 12px 30px rgba(22,46,96,.10); transform: translateY(-4px); }
+        .pricing-card.popular { border: 2px solid var(--primary); position: relative; }
+        .popular-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+        .pricing-card h3 { font-size: 22px; color: var(--heading); margin-bottom: 4px; }
+        .pricing-card .desc { color: var(--body); font-size: 14px; margin-bottom: 12px; }
+        .seats-pill { display: inline-block; align-self: flex-start; background: var(--bg); color: var(--body); font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 14px; margin-bottom: 16px; }
+        .price { font-size: 42px; font-weight: 700; color: var(--primary); line-height: 1.1; margin-bottom: 4px; white-space: nowrap; }
+        .price .per { font-size: 15px; color: #9aa6b8; font-weight: 400; }
+        .save-pill { display: none; font-size: 13px; font-weight: 600; color: #1c8a55; margin-bottom: 18px; }
+        body.annual .save-pill { display: block; }
+        body:not(.annual) .save-pill { margin-bottom: 18px; }
+        .p-a { display: none; }
+        body.annual .p-a { display: inline; }
+        body.annual .p-m { display: none; }
+        .price .was-a { font-size: 22px; color: #9aa6b8; font-weight: 400; text-decoration: line-through; margin-right: 8px; vertical-align: middle; }
+        .features-list { list-style: none; text-align: left; margin-bottom: 24px; flex: 1; }
+        .features-list li { padding: 6px 0 6px 26px; position: relative; color: var(--body); font-size: 14.5px; }
+        .features-list li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
+
+        /* Custom site */
+        .custom { padding: 30px 0 60px; }
+        .custom-title { text-align: center; font-size: 30px; color: var(--heading); margin-bottom: 10px; }
+        .custom-sub { text-align: center; color: var(--body); margin-bottom: 42px; font-size: 16px; }
+        .custom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; max-width: 880px; margin: 0 auto; }
+        .custom-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 34px 32px; }
+        .custom-card h3 { font-size: 21px; color: var(--heading); margin-bottom: 12px; }
+        .custom-card .cprice { font-size: 26px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+        .custom-card .cprice small { font-size: 15px; color: #9aa6b8; font-weight: 400; }
+        .custom-card .cannual { font-size: 14px; color: var(--body); margin-bottom: 16px; }
+        .custom-card p.cinc { font-size: 14.5px; color: var(--body); margin-bottom: 22px; }
+
+        /* FAQ */
+        .faq { padding: 64px 0; background: var(--bg); }
+        .faq h2 { text-align: center; font-size: 32px; color: var(--heading); margin-bottom: 42px; }
         .faq-grid { max-width: 800px; margin: 0 auto; }
-        .faq-item { margin-bottom: 25px; }
-        .faq-item h3 { font-size: 18px; color: #0b3b36; margin-bottom: 8px; }
-        .faq-item p { color: #6b7280; }
-        footer { background: #111827; color: #9ca3af; padding: 40px 0; text-align: center; }
-        footer a { color: #9ca3af; text-decoration: none; margin: 0 10px; }
+        .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 14px; }
+        .faq-item h3 { font-size: 17px; color: var(--heading); margin-bottom: 6px; }
+        .faq-item p { color: var(--body); font-size: 14.5px; }
+
+        footer { background: var(--heading); color: #9aa6b8; padding: 38px 0; text-align: center; }
+        .footer-links { margin-bottom: 16px; }
+        footer a { color: #9aa6b8; margin: 0 12px; font-size: 15px; }
         footer a:hover { color: #fff; }
-        .footer-links { margin-bottom: 20px; }
+        footer p { font-size: 14px; }
+
+        .float-dock { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 900; display: flex; flex-direction: column; gap: 10px; }
+        .float-dock .dock-btn { background: var(--primary); color: #fff; border: none; border-radius: 10px; padding: 12px 10px; font-weight: 600; font-size: 13px; cursor: pointer; writing-mode: vertical-rl; box-shadow: 0 6px 18px rgba(22,46,96,.28); }
+        .float-dock .dock-btn:hover { background: var(--primary-dark); }
+        .to-top { position: fixed; right: 18px; bottom: 22px; z-index: 900; width: 44px; height: 44px; border-radius: 50%; background: var(--deep); color: #fff; border: none; cursor: pointer; font-size: 20px; box-shadow: 0 6px 18px rgba(22,46,96,.28); opacity: 0; pointer-events-none; transition: opacity .25s; }
+        .to-top.show { opacity: 1; pointer-events: auto; }
+
+        @media (max-width: 860px) {
+            .trial-card { flex-direction: column; text-align: center; padding: 36px 28px; gap: 24px; }
+            .trial-list { text-align: left; }
+            .founding-card { flex-direction: column; text-align: center; gap: 8px; }
+        }
         @media (max-width: 768px) {
-            .page-header h1 { font-size: 32px; }
-            .price { font-size: 36px; }
+            .page-header h1 { font-size: 31px; }
             .nav-links { display: none; }
+            .logo img { height: 38px; }
         }
     </style>
 </head>
@@ -54,11 +150,12 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">AnjHub</a>
+                <a href="index.html" class="logo"><img src="../assets/brand/anjhub-logo.svg" alt="AnjHub"></a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="index.html#templates">Templates</a></li>
+                    <li><a href="#faq" class="nav-cta">Start Free Trial</a></li>
                 </ul>
             </nav>
         </div>
@@ -67,91 +164,180 @@
     <section class="page-header">
         <div class="container">
             <h1>Simple, Transparent Pricing</h1>
-            <p>One-time purchase. No subscriptions. No hidden fees. Your salon website, forever.</p>
+            <p>Start with a free 14-day trial and explore everything. Continue month to month or save with annual billing — no surprise charges, no lock-in.</p>
         </div>
     </section>
 
-    <section class="pricing">
+    <section class="trial" id="trial">
+        <div class="trial-card">
+            <div class="trial-left">
+                <span class="trial-badge">14-DAY FREE TRIAL</span>
+                <div class="trial-price">$0 <small>/ 14 days</small></div>
+                <p>Try the complete AnjHub system on your salon.</p>
+                <ul class="trial-list">
+                    <li>Full online booking &amp; confirmations</li>
+                    <li>Templates, drag-and-drop editing</li>
+                    <li>Membership, coupons &amp; marketing tools</li>
+                    <li>Works on desktop, tablet and phone</li>
+                    <li>No automatic billing after the trial</li>
+                </ul>
+            </div>
+            <div class="trial-right">
+                <a href="#faq" class="btn btn-light btn-block">Start Your Free Trial</a>
+                <p class="note">After 14 days our team will help you choose the right plan — you're never charged automatically.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="founding">
         <div class="container">
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <p class="desc">For new salons getting online</p>
-                    <div class="price">
-                        <span style="text-decoration:line-through; color:#9ca3af; font-size:24px; margin-right:8px;">$899</span>
-                        $499 <span>one-time</span>
-                    </div>
-                    <ul class="features-list">
-                        <li>Professional salon website</li>
-                        <li>Customer online booking (tablet)</li>
-                        <li>Membership system</li>
-                        <li>Staff scheduling</li>
-                        <li>Service menu management</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline" style="width:100%">Get Started</a>
-                </div>
-
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Professional</h3>
-                    <p class="desc">For growing salons</p>
-                    <div class="price">
-                        <span style="text-decoration:line-through; color:#9ca3af; font-size:24px; margin-right:8px;">$1,399</span>
-                        $599 <span>one-time</span>
-                    </div>
-                    <ul class="features-list">
-                        <li>Everything in Starter</li>
-                        <li>Coupon & card system</li>
-                        <li>Financial reports</li>
-                        <li>Marketing image tools</li>
-                        <li>Merchant + manager + staff backends</li>
-                        <li>Customer loyalty points</li>
-                        <li>Priority email support</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary" style="width:100%">Get Started</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>Elite</h3>
-                    <p class="desc">For luxury salons & chains</p>
-                    <div class="price">
-                        <span style="text-decoration:line-through; color:#9ca3af; font-size:24px; margin-right:8px;">$1,699</span>
-                        $799 <span>one-time</span>
-                    </div>
-                    <ul class="features-list">
-                        <li>Everything in Professional</li>
-                        <li>Multi-language support</li>
-                        <li>Custom template design</li>
-                        <li>Multi-store management</li>
-                        <li>API integration</li>
-                        <li>VIP support & training</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline" style="width:100%">Contact Sales</a>
+            <div class="founding-card">
+                <span class="star">★</span>
+                <div>
+                    <h3>Founding Customer Offer — 10% Off, Locked Forever</h3>
+                    <p>The first 50 salons get 10% off any plan with the price locked for life. Limited spots remain — ask our team when you start your trial.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="faq">
+    <section class="plans" id="plans">
         <div class="container">
-            <h2 class="section-title" style="text-align:center; font-size:36px; margin-bottom:40px; color:#0b3b36;">Frequently Asked Questions</h2>
+            <h2 class="plans-title">Subscription Plans</h2>
+            <p class="plans-sub">Everything in one monthly subscription. Switch plans or cancel anytime.</p>
+
+            <div class="billing-toggle">
+                <span class="lbl active" id="lblMonthly">Monthly</span>
+                <button class="switch" id="billingSwitch" role="switch" aria-checked="false" aria-label="Toggle annual billing"></button>
+                <span class="lbl" id="lblAnnual">Annual</span>
+                <span class="save-tag">2 months free</span>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="desc">For new salons getting online</p>
+                    <span class="seats-pill">1–2 logins</span>
+                    <div class="price">
+                        <span class="p-m">$45</span><span class="p-a"><span class="was-a">$699</span>$449</span>
+                        <span class="per p-m">/month</span><span class="per p-a">/year</span>
+                    </div>
+                    <div class="save-pill">2 months free with annual billing</div>
+                    <ul class="features-list">
+                        <li>Booking system + independent website (1 template)</li>
+                        <li>Staff &amp; scheduling</li>
+                        <li>Member management</li>
+                        <li>Tutorial videos + email support</li>
+                    </ul>
+                    <a href="#faq" class="btn btn-outline btn-block">Contact Sales</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Standard</h3>
+                    <p class="desc">For growing salons</p>
+                    <span class="seats-pill">3–5 logins</span>
+                    <div class="price">
+                        <span class="p-m">$75</span><span class="p-a"><span class="was-a">$999</span>$749</span>
+                        <span class="per p-m">/month</span><span class="per p-a">/year</span>
+                    </div>
+                    <div class="save-pill">2 months free with annual billing</div>
+                    <ul class="features-list">
+                        <li>Everything in Starter</li>
+                        <li>Kiosk walk-in (hardware not included)</li>
+                    </ul>
+                    <a href="#faq" class="btn btn-primary btn-block">Contact Sales</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <p class="desc">For busy salons &amp; advanced teams</p>
+                    <span class="seats-pill">7+ logins</span>
+                    <div class="price">
+                        <span class="p-m">$89</span><span class="p-a"><span class="was-a">$1,299</span>$889</span>
+                        <span class="per p-m">/month</span><span class="per p-a">/year</span>
+                    </div>
+                    <div class="save-pill">2 months free with annual billing</div>
+                    <ul class="features-list">
+                        <li>Everything in Standard</li>
+                        <li>One 1-on-1 remote training session</li>
+                    </ul>
+                    <a href="#faq" class="btn btn-outline btn-block">Contact Sales</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Multi-Site</h3>
+                    <p class="desc">For owners with multiple locations</p>
+                    <span class="seats-pill">Unlimited logins</span>
+                    <div class="price">
+                        <span class="p-m">$139</span><span class="p-a"><span class="was-a">$1,899</span>$1,390</span>
+                        <span class="per p-m">/month</span><span class="per p-a">/year</span>
+                    </div>
+                    <div class="save-pill">2 months free with annual billing</div>
+                    <ul class="features-list">
+                        <li>Multi-location management</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                    <a href="#faq" class="btn btn-outline btn-block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="custom">
+        <div class="container">
+            <h2 class="custom-title">Need a Fully Custom Website?</h2>
+            <p class="custom-sub">A one-of-a-kind design on your own domain, built and maintained by our team.</p>
+            <div class="custom-grid">
+                <div class="custom-card">
+                    <h3>Custom Website</h3>
+                    <div class="cprice">$990 <small>one-time</small></div>
+                    <p class="cannual">+ $390 / year</p>
+                    <p class="cinc">Own domain, custom design and standalone deployment. The annual fee covers domain, SSL, backups, updates and small content edits.</p>
+                    <a href="#faq" class="btn btn-outline btn-block">Contact Sales</a>
+                </div>
+                <div class="custom-card">
+                    <h3>Premium Full Package</h3>
+                    <div class="cprice">$1,490 <small>one-time</small></div>
+                    <p class="cannual">+ $490 / year</p>
+                    <p class="cinc">Logo refinement plus banner and portfolio image refinement, with up to 2 revision rounds. Delivered in 10 business days.</p>
+                    <a href="#faq" class="btn btn-primary btn-block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>What's included in a one-time purchase?</h3>
-                    <p>You get lifetime access to the template, including all future updates. No monthly or yearly fees.</p>
+                    <h3>What happens after the 14-day trial?</h3>
+                    <p>Our team contacts you to understand your salon and help you choose a plan. There is no pressure to continue and you are never charged automatically.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Can I switch templates later?</h3>
-                    <p>Yes. If you want a different template, you can purchase it at any time. We'll help migrate your content.</p>
+                    <h3>Should I pay monthly or annually?</h3>
+                    <p>Both include the same features. Annual billing gives you 2 months free — for example, Standard is $749/year instead of $900 at the monthly rate.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Do I need technical skills?</h3>
-                    <p>No. Our templates are designed for non-technical salon owners. Simply customize colors, photos, and text.</p>
+                    <h3>How many staff logins are included?</h3>
+                    <p>Starter supports 1–2 logins, Standard 3–5, Premium 7+, and Multi-Site is unlimited. Disabling a login frees its spot instantly.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Is there a refund policy?</h3>
-                    <p>Yes. We offer a 14-day money-back guarantee if you're not satisfied with your template.</p>
+                    <h3>Can I get a custom-designed website?</h3>
+                    <p>Yes. Our Custom Website and Premium Full Package give you a unique design on your own domain, built and maintained by our team.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is the founding customer offer?</h3>
+                    <p>The first 50 salons receive 10% off any plan with that price locked for life — even when standard prices change later.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need any technical skills?</h3>
+                    <p>No. Add your services, photos and prices, then publish. If you'd like help, our team can walk you through it.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can customers really book online by themselves?</h3>
+                    <p>Yes — they pick a service, a stylist and an open time slot, then receive a confirmation and reminder, with no double-booking.</p>
                 </div>
             </div>
         </div>
@@ -162,12 +348,43 @@
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="pricing.html">Pricing</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="refund.html">Refund Policy</a>
+                <a href="index.html#templates">Templates</a>
+                <a href="#faq">FAQ</a>
             </div>
             <p>&copy; 2026 AnjHub (爱加引擎). All rights reserved.</p>
         </div>
     </footer>
+
+    <div class="float-dock">
+        <button class="dock-btn" onclick="document.getElementById('faq').scrollIntoView()">Book a Demo</button>
+    </div>
+    <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+    <script>
+        // Monthly / Annual billing toggle
+        (function () {
+            var sw = document.getElementById('billingSwitch');
+            var lM = document.getElementById('lblMonthly');
+            var lA = document.getElementById('lblAnnual');
+            function setAnnual(on) {
+                document.body.classList.toggle('annual', on);
+                sw.setAttribute('aria-checked', on ? 'true' : 'false');
+                lM.classList.toggle('active', !on);
+                lA.classList.toggle('active', on);
+            }
+            sw.addEventListener('click', function () {
+                setAnnual(!document.body.classList.contains('annual'));
+            });
+            lM.addEventListener('click', function () { setAnnual(false); });
+            lA.addEventListener('click', function () { setAnnual(true); });
+        })();
+
+        // Back to top
+        var toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 500) { toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
+        });
+        toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    </script>
 </body>
 </html>

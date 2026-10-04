@@ -3,58 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnjHub — Website Templates for Hair & Beauty Salons</title>
-    <meta name="description" content="AnjHub builds beautiful websites for hair salons, barbershops & beauty studios. Launch your online presence in minutes.">
+    <link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg">
+    <title>AnjHub — Online Booking Websites for Hair & Beauty Salons</title>
+    <meta name="description" content="AnjHub gives hair salons, barbershops and beauty studios a professional website with built-in online booking. Start your free 14-day trial — plans from $45/month.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background: #fff; }
+        :root {
+            --primary: #2F5597;
+            --primary-dark: #284a85;
+            --deep: #162E60;
+            --heading: #15243B;
+            --body: #3D4F66;
+            --border: #D9DFE7;
+            --bg: #f4f6fa;
+            --tint: #e3ebf7;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: var(--body); background: #fff; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-        .logo { font-size: 24px; font-weight: 700; color: #0f766e; text-decoration: none; }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
-        .nav-links a:hover { color: #0f766e; }
-        .btn { display: inline-block; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
-        .btn-primary { background: #0f766e; color: #fff; }
-        .btn-primary:hover { background: #0d5d56; transform: translateY(-2px); }
-        .btn-outline { border: 2px solid #0f766e; color: #0f766e; }
-        .btn-outline:hover { background: #0f766e; color: #fff; }
-        .hero { margin-top: 80px; padding: 80px 0; background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); }
-        .hero-content { text-align: center; max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; color: #0b3b36; }
-        .hero p { font-size: 20px; color: #4b5563; margin-bottom: 30px; }
-        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        .features { padding: 80px 0; }
-        .section-title { text-align: center; font-size: 36px; margin-bottom: 50px; color: #0b3b36; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .feature-card { text-align: center; padding: 30px; }
-        .feature-icon { width: 60px; height: 60px; background: #ccfbf1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; }
-        .feature-card h3 { font-size: 22px; margin-bottom: 10px; color: #0b3b36; }
-        .feature-card p { color: #6b7280; }
-        .templates { padding: 80px 0; background: #f9fafb; }
-        .templates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .template-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        a { text-decoration: none; }
+
+        /* Header */
+        header { background: #fff; box-shadow: 0 1px 3px rgba(21,36,59,0.12); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+        .logo { display: inline-flex; align-items: center; }
+        .logo img { height: 50px; width: auto; display: block; }
+        .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--heading); font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta { display: inline-block; background: var(--primary); color: #fff !important; padding: 9px 20px; border-radius: 8px; font-weight: 600; transition: background .2s; }
+        .nav-cta:hover { background: var(--primary-dark); }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 13px 28px; border-radius: 8px; font-weight: 600; transition: all .2s; border: 2px solid transparent; cursor: pointer; font-size: 16px; }
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-outline { border-color: var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline:hover { background: var(--primary); color: #fff; }
+        .btn-light { background: #fff; color: var(--primary); }
+        .btn-light:hover { transform: translateY(-2px); }
+        .btn-ghost { border-color: rgba(255,255,255,.6); color: #fff; background: transparent; }
+        .btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+        /* Hero */
+        .hero { margin-top: 88px; padding: 84px 0 76px; background: linear-gradient(135deg, #eef3fb 0%, #dbe6f6 100%); }
+        .hero-content { text-align: center; max-width: 820px; margin: 0 auto; }
+        .hero .eyebrow { display: inline-block; background: var(--tint); color: var(--primary); font-weight: 600; font-size: 14px; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; }
+        .hero h1 { font-size: 46px; line-height: 1.15; margin-bottom: 18px; color: var(--heading); }
+        .hero p { font-size: 19px; color: var(--body); margin-bottom: 30px; }
+        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .hero-strip { margin-top: 34px; display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; color: var(--deep); font-weight: 600; font-size: 14px; }
+        .hero-strip span { opacity: .85; }
+
+        /* Sections */
+        section { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 34px; margin-bottom: 12px; color: var(--heading); }
+        .section-sub { text-align: center; color: var(--body); max-width: 640px; margin: 0 auto 50px; font-size: 17px; }
+
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; }
+        .feature-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 30px 26px; transition: transform .2s, box-shadow .2s; }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(22,46,96,.10); }
+        .feature-icon { width: 56px; height: 56px; background: var(--tint); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px; }
+        .feature-card h3 { font-size: 19px; margin-bottom: 8px; color: var(--heading); }
+        .feature-card p { color: var(--body); font-size: 15px; }
+
+        /* Templates */
+        .templates { background: var(--bg); }
+        .templates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+        .template-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 14px rgba(21,36,59,.08); transition: transform .2s; }
         .template-card:hover { transform: translateY(-5px); }
-        .template-img { width: 100%; height: 220px; object-fit: cover; display: block; }
-        .template-info { padding: 25px; }
-        .template-info h3 { font-size: 22px; margin-bottom: 8px; color: #0b3b36; }
-        .template-info p { color: #6b7280; margin-bottom: 15px; }
-        .template-price { font-size: 28px; font-weight: 700; color: #0f766e; }
-        .template-price span { font-size: 14px; color: #9ca3af; font-weight: 400; }
-        .cta { padding: 80px 0; background: #0f766e; color: #fff; text-align: center; }
-        .cta h2 { font-size: 36px; margin-bottom: 20px; }
-        .cta p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
-        .cta .btn { background: #fff; color: #0f766e; }
-        footer { background: #111827; color: #9ca3af; padding: 40px 0; text-align: center; }
-        footer a { color: #9ca3af; text-decoration: none; margin: 0 10px; }
+        .template-img { width: 100%; height: 210px; object-fit: cover; display: block; }
+        .template-info { padding: 22px 24px 26px; }
+        .template-info h3 { font-size: 20px; margin-bottom: 6px; color: var(--heading); }
+        .template-info p { color: var(--body); font-size: 14px; margin-bottom: 16px; min-height: 42px; }
+        .template-row { display: flex; align-items: center; justify-content: space-between; }
+        .template-price { font-size: 24px; font-weight: 700; color: var(--primary); }
+        .template-price small { font-size: 13px; color: #9aa6b8; font-weight: 400; }
+        .template-info .btn { padding: 9px 18px; font-size: 14px; }
+
+        /* CTA */
+        .cta { background: var(--deep); color: #fff; text-align: center; }
+        .cta h2 { font-size: 34px; margin-bottom: 14px; }
+        .cta p { font-size: 17px; opacity: .9; margin-bottom: 30px; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .cta .note { margin-top: 22px; font-size: 14px; opacity: .75; }
+
+        /* Footer */
+        footer { background: var(--heading); color: #9aa6b8; padding: 38px 0; text-align: center; }
+        .footer-links { margin-bottom: 16px; }
+        footer a { color: #9aa6b8; margin: 0 12px; font-size: 15px; }
         footer a:hover { color: #fff; }
-        .footer-links { margin-bottom: 20px; }
+        footer p { font-size: 14px; }
+
+        /* Floating dock */
+        .float-dock { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 900; display: flex; flex-direction: column; gap: 10px; }
+        .float-dock .dock-btn { background: var(--primary); color: #fff; border: none; border-radius: 10px; padding: 12px 10px; font-weight: 600; font-size: 13px; cursor: pointer; writing-mode: vertical-rl; letter-spacing: .5px; box-shadow: 0 6px 18px rgba(22,46,96,.28); transition: background .2s; }
+        .float-dock .dock-btn:hover { background: var(--primary-dark); }
+        .to-top { position: fixed; right: 18px; bottom: 22px; z-index: 900; width: 44px; height: 44px; border-radius: 50%; background: var(--deep); color: #fff; border: none; cursor: pointer; font-size: 20px; box-shadow: 0 6px 18px rgba(22,46,96,.28); opacity: 0; pointer-events: none; transition: opacity .25s; }
+        .to-top.show { opacity: 1; pointer-events: auto; }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 32px; }
             .hero p { font-size: 16px; }
-            .section-title { font-size: 28px; }
+            .section-title, .cta h2 { font-size: 27px; }
             .nav-links { display: none; }
+            .logo img { height: 38px; }
+            .float-dock { right: 12px; }
         }
     </style>
 </head>
@@ -62,11 +117,13 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">AnjHub</a>
+                <a href="index.html" class="logo"><img src="../assets/brand/anjhub-logo.svg" alt="AnjHub"></a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="#templates">Templates</a></li>
+                    <li><a href="#features">Why AnjHub</a></li>
+                    <li><a href="pricing.html" class="nav-cta">Start Free Trial</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,34 +132,61 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Beautiful Websites for Hair & Beauty Salons</h1>
-                <p>AnjHub (爱加引擎) builds professional, ready-to-use website templates designed exclusively for hair salons, barbershops, and beauty studios. Launch your online presence in minutes.</p>
+                <span class="eyebrow">Built for hair &amp; beauty businesses</span>
+                <h1>Get Your Salon Booked Online — in Minutes</h1>
+                <p>AnjHub (爱加引擎) gives hair salons, barbershops and beauty studios a professional website with built-in online booking. Your clients pick a service, stylist and time — no calls, no double-booking, no coding.</p>
                 <div class="hero-btns">
-                    <a href="pricing.html" class="btn btn-primary">View Pricing</a>
+                    <a href="pricing.html" class="btn btn-primary">Start Free — 14-Day Trial</a>
+                    <a href="#cta" class="btn btn-outline">Book a Demo</a>
                     <a href="#templates" class="btn btn-outline">Browse Templates</a>
+                </div>
+                <div class="hero-strip">
+                    <span>No coding required</span>
+                    <span>·</span>
+                    <span>Mobile-ready</span>
+                    <span>·</span>
+                    <span>Multi-language</span>
+                    <span>·</span>
+                    <span>You own your data</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="features">
+    <section id="features">
         <div class="container">
             <h2 class="section-title">Why Choose AnjHub</h2>
+            <p class="section-sub">Everything you need to take bookings, look professional and keep clients coming back — in one place.</p>
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Online Booking Built In</h3>
+                    <p>Clients choose a service, stylist and open slot. Instant confirmations and email reminders, with no double-booking.</p>
+                </div>
+                <div class="feature-card">
                     <div class="feature-icon">✂️</div>
-                    <h3>Built for Hair & Beauty</h3>
-                    <p>Every template is crafted specifically for salons, barbershops, and beauty professionals.</p>
+                    <h3>Made for Hair &amp; Beauty</h3>
+                    <p>Templates designed for salons, barbershops and beauty studios — not generic, one-size-fits-all pages.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Quick Setup</h3>
-                    <p>Get your salon website up and running in minutes, not weeks. No coding required.</p>
+                    <h3>Launch in Minutes</h3>
+                    <p>No coding and no developers. Add your services, photos and prices, then publish your site.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
-                    <h3>Mobile Ready</h3>
-                    <p>All templates are fully responsive and look perfect on any device — desktop, tablet, or phone.</p>
+                    <h3>Perfect on Every Device</h3>
+                    <p>Fully responsive, so your site looks and works beautifully on phones, tablets and desktops.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Speaks Every Language</h3>
+                    <p>Built-in multi-language support helps you welcome international and local customers alike.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>You Own Your Data</h3>
+                    <p>Subscribe month to month or choose a custom standalone site — your website, your content and your data stay yours.</p>
                 </div>
             </div>
         </div>
@@ -111,40 +195,54 @@
     <section class="templates" id="templates">
         <div class="container">
             <h2 class="section-title">Our Templates</h2>
+            <p class="section-sub">Start with a ready-made design and make it yours. Every template works on desktop and mobile.</p>
             <div class="templates-grid">
                 <div class="template-card">
-                    <img class="template-img" src="img/karisma-beauty-salon.jpg" alt="Karisma Beauty Salon template preview" loading="lazy">
+                    <img class="template-img" src="img/karisma-beauty-salon.jpg" alt="Karisma beauty salon template preview" loading="lazy">
                     <div class="template-info">
                         <h3>Karisma</h3>
-                        <p>Soft pink elegance for beauty salons and nail studios. Elementor-based, easy to customize.</p>
-                        <div class="template-price">$49 <span>one-time</span></div>
+                        <p>Soft, elegant look for beauty salons and nail studios. Easy to customize.</p>
+                        <div class="template-row">
+                            <div class="template-price">Included <small>with any plan</small></div>
+                            <a href="pricing.html" class="btn btn-outline">Use Template</a>
+                        </div>
                     </div>
                 </div>
                 <div class="template-card">
-                    <img class="template-img" src="img/gracell-beauty-salon.jpg" alt="Gracell Beauty Parlor template preview" loading="lazy">
+                    <img class="template-img" src="img/gracell-beauty-salon.jpg" alt="Gracell beauty parlor template preview" loading="lazy">
                     <div class="template-info">
                         <h3>Gracell</h3>
-                        <p>Fashionable and stylish design for beauty parlors and makeup studios. Bold and modern.</p>
-                        <div class="template-price">$59 <span>one-time</span></div>
+                        <p>Stylish, modern design for beauty parlors and makeup studios.</p>
+                        <div class="template-row">
+                            <div class="template-price">Included <small>with any plan</small></div>
+                            <a href="pricing.html" class="btn btn-outline">Use Template</a>
+                        </div>
                     </div>
                 </div>
                 <div class="template-card">
-                    <img class="template-img" src="img/durand-hair-salon.jpg" alt="Durand Hair Salon template preview" loading="lazy">
+                    <img class="template-img" src="img/durand-hair-salon.jpg" alt="Durand hair salon template preview" loading="lazy">
                     <div class="template-info">
                         <h3>Durand</h3>
-                        <p>Clean editorial design for hair salons and barbershops. Light, airy, and professional.</p>
-                        <div class="template-price">$79 <span>one-time</span></div>
+                        <p>Clean, editorial look for hair salons and barbershops. Light and professional.</p>
+                        <div class="template-row">
+                            <div class="template-price">Included <small>with any plan</small></div>
+                            <a href="pricing.html" class="btn btn-outline">Use Template</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
+    <section class="cta" id="cta">
         <div class="container">
-            <h2>Ready to Launch Your Salon Website?</h2>
-            <p>Join hundreds of hair & beauty professionals already using AnjHub templates.</p>
-            <a href="pricing.html" class="btn">Get Started Today</a>
+            <h2>Ready to Get Booked Online?</h2>
+            <p>Try everything free for 14 days. If it isn't right for your salon, simply walk away.</p>
+            <div class="cta-btns">
+                <a href="pricing.html" class="btn btn-light">Start Free — 14-Day Trial</a>
+                <a href="pricing.html#faq" class="btn btn-ghost">Book a Demo</a>
+            </div>
+            <p class="note">No automatic billing after the trial — our team will help you choose the right plan.</p>
         </div>
     </section>
 
@@ -153,12 +251,24 @@
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="pricing.html">Pricing</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="refund.html">Refund Policy</a>
+                <a href="#templates">Templates</a>
+                <a href="#features">Why AnjHub</a>
             </div>
             <p>&copy; 2026 AnjHub (爱加引擎). All rights reserved.</p>
         </div>
     </footer>
+
+    <div class="float-dock">
+        <button class="dock-btn" onclick="document.getElementById('cta').scrollIntoView()">Book a Demo</button>
+    </div>
+    <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+    <script>
+        var toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 500) { toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
+        });
+        toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    </script>
 </body>
 </html>
