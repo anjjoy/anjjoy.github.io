@@ -61,12 +61,18 @@
         .section-sub { text-align: center; color: var(--body); max-width: 640px; margin: 0 auto 50px; font-size: 17px; }
 
         /* Features */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; }
-        .feature-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 30px 26px; transition: transform .2s, box-shadow .2s; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; }
+        .feature-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; transition: transform .2s, box-shadow .2s; }
         .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(22,46,96,.10); }
-        .feature-icon { width: 56px; height: 56px; background: var(--tint); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px; }
-        .feature-card h3 { font-size: 19px; margin-bottom: 8px; color: var(--heading); }
-        .feature-card p { color: var(--body); font-size: 15px; }
+        .feature-icon { width: 56px; height: 56px; background: var(--tint); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .feature-icon svg { width: 28px; height: 28px; stroke: var(--primary); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+        .feature-card h3 { font-size: 19px; margin-bottom: 10px; color: var(--heading); font-weight: 700; }
+        .feature-card p { color: var(--body); font-size: 15px; margin-bottom: 12px; }
+        .feature-card ul { list-style: none; padding: 0; }
+        .feature-card ul li { position: relative; padding-left: 18px; font-size: 14.5px; color: var(--body); margin-bottom: 6px; line-height: 1.55; }
+        .feature-card ul li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--primary); opacity: .7; }
+        .feature-card strong { color: var(--heading); font-weight: 600; }
+        .feature-tag { display: inline-block; background: var(--tint); color: var(--primary); font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 6px; }
 
         /* Templates */
         .templates { background: var(--bg); }
@@ -156,37 +162,53 @@
     <section id="features">
         <div class="container">
             <h2 class="section-title">Why Choose AnjHub</h2>
-            <p class="section-sub">Everything you need to take bookings, look professional and keep clients coming back — in one place.</p>
+            <p class="section-sub">Everything you need to build a professional website, run your store and grow your client base — in one place.</p>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">📅</div>
-                    <h3>Online Booking Built In</h3>
-                    <p>Clients choose a service, stylist and open slot. Instant confirmations and email reminders, with no double-booking.</p>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+                    <h3>Build Your Site in Minutes</h3>
+                    <p>Rich template library — pick a design you love and launch a professional website fast. Full-featured, easy to use, <strong>no coding required</strong>.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">✂️</div>
-                    <h3>Made for Hair &amp; Beauty</h3>
-                    <p>Templates designed for salons, barbershops and beauty studios — not generic, one-size-fits-all pages.</p>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H5.17L4 17.17V4z"/><path d="M22 6l-10 7L2 6"/><path d="M8 19h8M12 16v3"/></svg></div>
+                    <h3>SMS &amp; Email Marketing Built In</h3>
+                    <ul>
+                        <li>Retain clients with bulk messaging; attract new ones with broader reach</li>
+                        <li><span class="feature-tag">1,000 free emails / month</span> on signup — special rates beyond</li>
+                        <li>SMS credits on demand at flexible, affordable pricing</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Launch in Minutes</h3>
-                    <p>No coding and no developers. Add your services, photos and prices, then publish your site.</p>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></div>
+                    <h3>Powerful In-Store Marketing Tools</h3>
+                    <ul>
+                        <li>Run promotions, publish offers and create custom coupons</li>
+                        <li>Build a loyalty points system for repeat clients</li>
+                        <li>Free high-res promotional image library for your campaigns</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Perfect on Every Device</h3>
-                    <p>Fully responsive, so your site looks and works beautifully on phones, tablets and desktops.</p>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M9 14l2 2 4-4"/></svg></div>
+                    <h3>Online Booking + Auto Reminders</h3>
+                    <ul>
+                        <li>Clients book directly on your website — saves time for both sides</li>
+                        <li><strong>Both SMS and email</strong> confirmations after booking</li>
+                        <li>Clients check points, coupons and booking history in their dashboard</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Speaks Every Language</h3>
-                    <p>Built-in multi-language support helps you welcome international and local customers alike.</p>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>All-in-One Staff Management</h3>
+                    <ul>
+                        <li>Dedicated backend for store operations and team management</li>
+                        <li>Owners, managers, front desk, finance and staff each get their own mobile dashboard</li>
+                        <li>Smart scheduling: view rosters, print schedules, request leave online</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>You Own Your Data</h3>
-                    <p>Subscribe month to month or choose a custom standalone site — your website, your content and your data stay yours.</p>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.2" fill="currentColor" stroke="none"/></svg></div>
+                    <h3>Your Data, Fully Yours</h3>
+                    <p>All business data generated by your website belongs to you. Stay in control of operations and <strong>protect your client base</strong>.</p>
                 </div>
             </div>
         </div>
@@ -196,40 +218,11 @@
         <div class="container">
             <h2 class="section-title">Our Templates</h2>
             <p class="section-sub">Start with a ready-made design and make it yours. Every template works on desktop and mobile.</p>
-            <div class="templates-grid">
-                <div class="template-card">
-                    <img class="template-img" src="img/karisma-beauty-salon.jpg" alt="Karisma beauty salon template preview" loading="lazy">
-                    <div class="template-info">
-                        <h3>Karisma</h3>
-                        <p>Soft, elegant look for beauty salons and nail studios. Easy to customize.</p>
-                        <div class="template-row">
-                            <div class="template-price">Included <small>with any plan</small></div>
-                            <a href="pricing.html" class="btn btn-outline">Use Template</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="template-card">
-                    <img class="template-img" src="img/gracell-beauty-salon.jpg" alt="Gracell beauty parlor template preview" loading="lazy">
-                    <div class="template-info">
-                        <h3>Gracell</h3>
-                        <p>Stylish, modern design for beauty parlors and makeup studios.</p>
-                        <div class="template-row">
-                            <div class="template-price">Included <small>with any plan</small></div>
-                            <a href="pricing.html" class="btn btn-outline">Use Template</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="template-card">
-                    <img class="template-img" src="img/durand-hair-salon.jpg" alt="Durand hair salon template preview" loading="lazy">
-                    <div class="template-info">
-                        <h3>Durand</h3>
-                        <p>Clean, editorial look for hair salons and barbershops. Light and professional.</p>
-                        <div class="template-row">
-                            <div class="template-price">Included <small>with any plan</small></div>
-                            <a href="pricing.html" class="btn btn-outline">Use Template</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="templates-grid" id="templatesGrid">
+                <div class="template-card"><div class="template-info"><p style="text-align:center;color:#9aa6b8;">Loading templates…</p></div></div>
+            </div>
+            <div style="text-align:center;margin-top:36px;">
+                <a href="templates.html" class="btn btn-primary">Browse All Templates →</a>
             </div>
         </div>
     </section>
@@ -269,6 +262,42 @@
             if (window.scrollY > 500) { toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
         });
         toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        // 加载最新 6 个已发布模板（静态 JSON，兼容 GitHub Pages）
+        (function () {
+            var grid = document.getElementById('templatesGrid');
+            if (!grid) return;
+            fetch('data/templates.json')
+                .then(function (r) { return r.json(); })
+                .then(function (res) {
+                    var list = (res && res.templates) || [];
+                    list = list.slice(0, 6);
+                    if (!list.length) {
+                        grid.innerHTML = '<div class="template-card"><div class="template-info"><p style="text-align:center;color:#9aa6b8;">No templates available yet.</p></div></div>';
+                        return;
+                    }
+                    grid.innerHTML = list.map(function (t) {
+                        var name = t.name || 'Untitled';
+                        var desc = t.description || 'A professional website template for your business.';
+                        if (desc.length > 120) desc = desc.substring(0, 117) + '…';
+                        var thumb = t.thumb_src || '';
+                        var img = thumb
+                            ? '<img class="template-img" src="' + thumb + '" alt="' + name + ' template preview" loading="lazy" onerror="this.style.display=\'none\'">'
+                            : '';
+                        return '<div class="template-card">' + img +
+                            '<div class="template-info">' +
+                            '<h3>' + name + '</h3>' +
+                            '<p>' + desc + '</p>' +
+                            '<div class="template-row">' +
+                            '<div class="template-price">Included <small>with any plan</small></div>' +
+                            '<a href="pricing.html" class="btn btn-outline">Use Template</a>' +
+                            '</div></div></div>';
+                    }).join('');
+                })
+                .catch(function () {
+                    grid.innerHTML = '<div class="template-card"><div class="template-info"><p style="text-align:center;color:#9aa6b8;">Failed to load templates.</p></div></div>';
+                });
+        })();
     </script>
 </body>
 </html>
