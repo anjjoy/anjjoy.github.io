@@ -1,7 +1,33 @@
 {
-    "generated_at": "2026-10-08T23:59:45+08:00",
-    "total": 17,
+    "generated_at": "2026-10-09T09:15:00+08:00",
+    "total": 19,
     "templates": [
+        {
+            "id": 50,
+            "name": "Noisette Nail Studio",
+            "industry": "nail-salon",
+            "style": "elegant",
+            "primary_color": "#5D3222",
+            "category": "nail-salon",
+            "description": "Noisette is a warm and calm nail studio template in deep brown and terracotta, featuring a hero carousel, services showcase, working hours, price grid, testimonials, FAQ and integrated online booking.",
+            "tags": "nail,salon,manicure,pedicure,brown,terracotta,elegant",
+            "languages": "en",
+            "thumb_src": "uploads\/templates\/tpl_50_336x252.jpg",
+            "preview_url": "\/anjhub\/public\/demo\/noisette\/index.html"
+        },
+        {
+            "id": 49,
+            "name": "Juliet Nail Studio",
+            "industry": "nail-salon",
+            "style": "elegant",
+            "primary_color": "#911439",
+            "category": "nail-salon",
+            "description": "Juliet is an elegant nail studio template in deep rose red, featuring a hero carousel, services grid, portfolio, team, testimonials, FAQ and integrated online booking.",
+            "tags": "nail,salon,manicure,pedicure,rose,elegant",
+            "languages": "en",
+            "thumb_src": "uploads\/templates\/tpl_49_336x252.jpg",
+            "preview_url": "\/anjhub\/public\/demo\/juliet\/index.html"
+        },
         {
             "id": 48,
             "name": "Razzle Beauty Salon",
